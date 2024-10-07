@@ -129,7 +129,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Config de acceso 
-CORS_ALLOWED_ORIGINS =["http://localhost:4173"]#server del Front
+CORS_ALLOWED_ORIGINS =["http://localhost:4173",  # para desarrollo local
+    "https://bookappfrontend.onrender.com"  # para producción
+                       ]#server del Front
 
 # Obtener la URL desde la variable de entorno o usar un valor por defecto
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
