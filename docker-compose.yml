@@ -1,0 +1,22 @@
+
+services:
+  backend:
+    build:
+      context: .  # Cambia esto a la raíz del proyecto
+      dockerfile: ./Prueba_RestAPI/Dockerfile  # Asegúrate de apuntar al Dockerfile correcto
+    volumes:
+      - .:/app  # Esto permite que se acceda a manage.py
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./client  # Ajusta según la ruta de tu frontend
+    ports:
+      - "4173:4173"
+    volumes:
+      - ./client:/usr/src/app
+      - node_modules:/usr/src/app/node_modules  # Asegúrate de que este volumen esté definido
+volumes:
+  node_modules: {}  # Aquí defines el volumen
+
