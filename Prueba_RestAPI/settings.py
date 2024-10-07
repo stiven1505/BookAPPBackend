@@ -38,16 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',#Permisos Back- Front
-    'rest_framework',# Para crear CRUD
+    'corsheaders',  # Permisos Back- Front
+    'rest_framework',  # Para crear CRUD
     'coreapi',
-    'books'#Aplicacion
+    'books'  # Aplicacion
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',#config cors
+    'corsheaders.middleware.CorsMiddleware',  # config cors
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -128,14 +128,14 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Config de acceso 
-CORS_ALLOWED_ORIGINS =["http://localhost:4173",  # para desarrollo local
-    "https://bookappfrontend.onrender.com"  # para producción
-                       ]#server del Front
-
+# Config de acceso
+CORS_ALLOWED_ORIGINS = [
+    "https://bookappfrontend.onrender.com",
+    "http://localhost:4173",  #desarrollando localmente
+]
 # Obtener la URL desde la variable de entorno o usar un valor por defecto
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
-#Autodocumentacion del backend
+# Autodocumentacion del backend
 REST_FRAMEWORK = {
     ...: ...,
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
