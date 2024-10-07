@@ -15,7 +15,7 @@ COPY manage.py /app/
 COPY ./Prueba_RestAPI /app/  
 
 # Establecer la variable de entorno para Django
-ENV DJANGO_SETTINGS_MODULE=Prueba_RestAPI.settings  
+ENV DJANGO_SETTINGS_MODULE=settings  
 
 # Exponer el puerto para el servidor de desarrollo
 EXPOSE 8000
