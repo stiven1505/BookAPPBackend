@@ -11,6 +11,7 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar el resto de la aplicación
+COPY . /app/
 COPY manage.py /app/ 
 COPY ./Prueba_RestAPI /app/  
 
@@ -21,4 +22,4 @@ ENV DJANGO_SETTINGS_MODULE=settings
 EXPOSE 8000
 
 # Comando para ejecutar el servidor
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Prueba_RestAPI.wsgi:application"]
