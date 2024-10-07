@@ -131,10 +131,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Config de acceso
 CORS_ALLOWED_ORIGINS = [
     "https://bookappfrontend.onrender.com",
-    "http://localhost:4173",  #desarrollando localmente
+    "http://localhost:4173",  # desarrollando localmente
 ]
-# Obtener la URL desde la variable de entorno o usar un valor por defecto
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
+
+ALLOWED_HOSTS = [
+    'bookappbackend-31ic.onrender.com',
+    'localhost',  # Opcional, para desarrollo local
+    '127.0.0.1'   # Opcional, para desarrollo local
+]
+
 # Autodocumentacion del backend
 REST_FRAMEWORK = {
     ...: ...,
