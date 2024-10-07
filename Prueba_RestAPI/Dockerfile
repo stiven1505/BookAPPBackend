@@ -11,8 +11,8 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar el resto de la aplicación
-#COPY manage.py /app/ 
-#COPY ./Prueba_RestAPI /app/  
+COPY manage.py /app/ 
+COPY ./Prueba_RestAPI /app/  
 
 # Establecer la variable de entorno para Django
 ENV DJANGO_SETTINGS_MODULE=Prueba_RestAPI.settings  
