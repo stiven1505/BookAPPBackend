@@ -78,14 +78,41 @@ WSGI_APPLICATION = 'Prueba_RestAPI.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+"""
+# DATABASES = {
+   # 'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+ #       'NAME': BASE_DIR / 'db.sqlite3',
 
+   }
+ }
+#DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bookshop_vn1i',  # Nombre de la base de datos
+        'USER': 'stiven',          # Usuario
+        'PASSWORD': 'Brayan15',    # Contraseña
+        'HOST': 'localhost',        # Host de la base de datos local
+        'PORT': '5432',             # Puerto de PostgreSQL
+        'OPTIONS': {
+            'sslmode': 'prefer',    # Se recomienda usar 'prefer' para conexiones locales
+        }
+    }
+}"""
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bookshop_vnfi',  # Nombre de la base de datos
+        'USER': 'stiven',  # Usuario
+        'PASSWORD': 'drTnUQLUp3DdreOtHUy9PU5toTvaz9A',  # Contraseña
+        # External Database URL sin "postgresql://"
+        'HOST': 'postgresql://stiven:drfTnUQLUp3DdreOtHUy9PU5toTvaz9A@dpg-cs2735ogph6c738vma60-a/bookshop_vn1i',
+        'PORT': '5432',  # Puerto de PostgreSQL
+        'OPTIONS': {
+            'sslmode': 'require',  # Habilitar SSL
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
