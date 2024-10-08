@@ -103,8 +103,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'bookshop_vn1i',  # Nombre de la base de datos
-        'USER': 'stiven',  # Usuario
-        'PASSWORD': 'drTnUQLUp3DdreOtHUy9PU5toTvaz9A',  # Contraseña
+        'USER': 'stiven',  # Usuario  
+        'PASSWORD': 'drfTnUQLUp3DdreOtHUy9PU5toTvaz9A',# Contraseña
         # External Database URL sin "postgresql://"
         'HOST': 'dpg-cs2735ogph6c738vma60-a',
         'PORT': '5432',  # Puerto de PostgreSQL
