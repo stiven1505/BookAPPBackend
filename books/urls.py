@@ -12,9 +12,3 @@ urlpatterns = [
     path("api/v1/", include(router.urls)),
     path('docs/', include_docs_urls(title="Books API"))
 ]
-from django.urls import path
-from .views import run_migrations
-
-urlpatterns = [
-    path('run-migrations/', run_migrations, name='run_migrations'),
-]
