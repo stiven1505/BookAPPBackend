@@ -16,6 +16,5 @@ from django.urls import path
 from .views import run_migrations
 
 urlpatterns = [
-    # Otras rutas...
     path('run-migrations/', run_migrations, name='run_migrations'),
 ]
