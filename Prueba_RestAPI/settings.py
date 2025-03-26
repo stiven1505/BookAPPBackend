@@ -102,11 +102,11 @@ WSGI_APPLICATION = 'Prueba_RestAPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bookshop_vn1i',  # Nombre de la base de datos
+        'NAME': 'bookshop_vn1i_rzcz',  # Nombre de la base de datos
         'USER': 'stiven',  # Usuario  
-        'PASSWORD': 'drfTnUQLUp3DdreOtHUy9PU5toTvaz9A',# Contraseña
+        'PASSWORD': 'RMCGRWsHuZw9pJEFw90Pwf88SBuizyYl',# Contraseña
         # External Database URL sin "postgresql://"
-        'HOST': 'dpg-cs2735ogph6c738vma60-a',
+        'HOST': 'dpg-cvi8a17noe9s739rg6dg-a',
         'PORT': '5432',  # Puerto de PostgreSQL
         'OPTIONS': {
             'sslmode': 'require',  # Habilitar SSL
