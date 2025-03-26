@@ -10,5 +10,6 @@ router.register(r'books', views.BooksView, 'books')
 #lista de url generadas
 urlpatterns = [
     path("api/v1/", include(router.urls)),
-    path('docs/', include_docs_urls(title="Books API"))
+    path('docs/', include_docs_urls(title="Books API")),
+    path("check-books/", check_books_data, name="check-books")
 ]
