@@ -13,6 +13,8 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Prueba_RestAPI.settings')
 
+django.setup()
+
 # Ejecutar migraciones automáticamente al iniciar
 from django.core.management import call_command
 call_command("migrate")
