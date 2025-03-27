@@ -19,13 +19,13 @@ from django.urls import path, include
 from django.core.management import call_command
 from django.http import JsonResponse
 
-def run_migrations(request):
-    call_command('migrate')
-    return JsonResponse({"message": "Migraciones ejecutadas con éxito"})
+# def run_migrations(request):
+#     call_command('migrate')
+#     return JsonResponse({"message": "Migraciones ejecutadas con éxito"})
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('books/',include('books.urls')),
-    path('run-migrations/', run_migrations, name="run-migrations")
+    # path('run-migrations/', run_migrations, name="run-migrations")
 ]
